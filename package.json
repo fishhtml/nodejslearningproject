@@ -1,0 +1,21 @@
+{
+  "name": "firstsite",
+  "version": "1.0.0",
+  "description": "hello firstsite",
+  "main": "firstsite.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "loo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express3-handlebars": "^0.5.2"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "zombie": "^5.0.5"
+  }
+}

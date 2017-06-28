@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>First website</title>
+	{{#if showTests}}
+	  <link rel="stylesheet" href="/vendor/mocha.css">
+	{{/if}}
+</head>
+<body>
+	<header><img src="img/logo.jpg" alt="Firstsite"></header>
+	{{{body}}}
+	{{#if showTests}}
+	  <div id="mocha"></div>
+	  <script src="/vendor/mocha.js"></script>
+	  <script src="/vendor/mocha.css"></script>
+	  <script>
+	    mocha.ui('tdd');
+	    var assert = chai.assert;
+	  </script>
+	  <script src="/qa/global-tests.js"></script>
+	  {{#if pageTestScript}}
+	    <script src="{{pageTestScript}}"></script>
+	  {{/if}}
+	    <script>mocha.run();</script>
+	{{/if}}
+</body>
+</html>
